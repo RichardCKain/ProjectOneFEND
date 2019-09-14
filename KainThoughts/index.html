@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--shout out to https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_elements for table and styling inspiration -->
+
+<html lang="en" dir="ltr">
+
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Udacity FEND Sep 2019 Project 1: Personal Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/superstuff.css">
+    <link href="https://fonts.googleapis.com/css?family=Asul|Copse|Euphoria+Script|Vesper+Libre:400,900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+<!--am I changing the file in github-->
+
+    <div class="container">
+      <div class="header box"><h1>Bibliotheca</h1></div>
+      <div class="shl box"><h2>Categories</h2></div>
+      <div class="shr box"><h2>Reviews</h2></div>
+
+
+      <nav class="sidebar box">
+        <div class="verticalizer" id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')">Show all</button>
+          <button class="btn" onclick="filterSelection('nonfiction')">Non-Fiction</button>
+          <button class="btn animals" onclick="filterSelection('fiction')">Fiction</button>
+          <button class="btn" onclick="filterSelection('history')">History</button>
+          <button class="btn" onclick="filterSelection('advice')">Advice</button>
+          <button class="btn" onclick="filterSelection('philosophy')">Philosophy</button>
+          <!--try to get a random class in here? to return one book?-->
+        </div>
+      </nav>
+
+      <div class="content box">
+
+        <div class="container2">
+          <!--would be fun to put in star overlay for favorites -->
+          <div class="filterDiv nonfiction philosophy"><a href="thewesterncanon.html">The Western Canon</a></div>
+          <div class="filterDiv nonfiction history">Western Society in the Middle Ages</div>
+          <div class="filterDiv fiction">Scoop</div>
+          <div class="filterDiv fiction">Confederacy of Dunces</div>
+          <div class="filterDiv nonfiction history">Dereliction of Duty</div>
+          <div class="filterDiv nonfiction ">The Birth of the Modern</div>
+          <div class="filterDiv nonfiction philosophy">Meditations</div>
+          <div class="filterDiv nonfiction advice">Battle Hymn of the Tiger Mother</div>
+          <div class="filterDiv fiction">The Sirens of Titan</div>
+          <div class="filterDiv nonfiction history">The Eastern Front</div>
+          <div class="filterDiv nonfiction advice">The Supple Leopard</div>
+          <div class="filterDiv nonfiction history">Atomic Habits</div>
+          <div class="filterDiv nonfiction history">Path to Power</div>
+          <div class="filterDiv fiction">Palliser Novels</div>
+        </div>
+
+      </div>
+
+
+
+      <div class="footer box">
+        <footer>
+          <p>&copy; 2019 Richard Kain. All rights re...Actually you can steal this. Or <a href="mailto:rich@triplepointpr.com?subject=coolsitebro">email me</a></p>
+        </footer>
+      </div>
+    </div>
+
+
+
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+
+
+
+  </body>
+
+
+
+
+</html>

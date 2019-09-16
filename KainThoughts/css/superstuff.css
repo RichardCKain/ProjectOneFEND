@@ -113,14 +113,16 @@ footer {
 }
 
 .shl {
-  grid-area: shl;
+  /* grid-area: shl;
   text-align: center;
-  vertical-align: center;
+  vertical-align: center; */
+  display: none;
 }
 
 .shr {
-  grid-area: shr;
-  text-align: center;
+    /* grid-area: shr;
+    text-align: center; */
+    display: none;
 }
 
 .footer {
@@ -214,9 +216,18 @@ footer {
         padding: 5px;
         background-color: #ab9044;
   }
-}
 
-@media (min-width: 482px){
+  .shl {
+    grid-area: shl;
+    text-align: center;
+    vertical-align: center;
+  }
+
+  .shr {
+    grid-area: shr;
+    text-align: center;
+  }
+
   .content {
     font-family: Copse;
     display: grid;

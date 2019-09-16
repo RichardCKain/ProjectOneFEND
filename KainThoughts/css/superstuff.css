@@ -8,23 +8,15 @@
   line-height: 100px;
   text-align: center;
   margin: 2px;
-  padding: 30px;
+  padding: 10px;
   display: none;
   border-radius: 5px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
 }
 
 .show {
   display: block;
 }
 
-.container {
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-/* Style the buttons */
 .btn {
   border: none;
   outline: red;
@@ -43,105 +35,160 @@
 }
 
 h1 {
-  color: blue;
+  color: purple;
   text-align: center;
-  /* put gothic font here */
-
 }
 
-h2{
+h2 {
   text-align: center;
   margin-block-start: 1px;
   margin-block-end: 5px;
   font-family: 'Vesper Libre', serif;
 }
 
-h3{
-
+h3 {
+  font-family: 'Vesper Libre', serif;
+  font-style: oblique;
 }
 
 body {
   padding: 20px;
 }
 
-#testtest {
-  color:red;
+img {
+  width: 200px;
 }
 
+.sidebar img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.authorinfo {
+  text-align: center;
+  background-color: white;
+  margin-bottom: 21px;
+}
+
+
 footer {
-  /* put font here */
   background-color: white;
   text-align: center;
   font-family: 'Euphoria Script', cursive;
 }
 
-/* mobile media using max not min, removing sidebar and subheads */
-
-/* going for landscape view phones */
-
-
 .container{
-  /* Step 1: Set display to grid */
     display:grid;
- /* Step 2: setup rows amd columns */
     grid-template-columns: 300px;
-    grid-template-rows: 80px auto 50px;
+    grid-template-rows: 100px 100px 3fr 1fr 50px;
     grid-template-areas:
     "hd"
+    "shr"
     "main"
+    "sd"
     "ft";
-    border: 2px solid blue;
+    border: 2px
+    border-color: #2196F3;
+    border-radius: 5px;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    background-color: #33cc33;
     padding-left: 5%;
     padding-right: 5%;
 }
 
-.box{
-  border: 3px #99ff99;
-  background: #e6f2ff;
-  }
+.box {
+  border: 3px #grey;
+  background: #ab9044;
+  background-image: url(https://backgrounddownload.com/wp-content/uploads/2018/09/papyrus-paper-background-5.jpg);
+}
+
 .header{
   grid-area:hd;
 }
-.shl{
+
+.shl {
   grid-area: shl;
   text-align: center;
   vertical-align: center;
 }
-.shr{
+
+.shr {
   grid-area: shr;
   text-align: center;
 }
-.footer{
+
+.footer {
   grid-area: ft;
   background-color: #e0e0eb;
 }
-.sidebar{ /*having trouble here making one column */
+.sidebar {
   grid-area: sd;
   display:flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  padding: 25px;
 }
-.content{
+.content {
   grid-area: main;
   display: flex;
-  flex-direction: row; /* make this direction column for mobile? */
+  flex-direction: row;
+  padding: 25px;
+}
+
+.content p {
+  background-color: white;
+}
+
+.content blockquote {
+  font-family: Asul;
+  background-color: #e7e4f0;
 }
 
 .container2 {
   margin: 2%;
   overflow: hidden;
   display: flex;
-  flex-direction: row; /* reverse this direction column for mobile? */
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 20px;
+  border-color: #2196F3;
 }
 
-.review-section {
-  font-family: Copse;
+.reviewtext {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 
+.bookpic {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.pubdata {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  border: 2px;
+}
+
+.navigate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.blockquote {
+  font-family: asul;
 }
 
 .verticalizer {
@@ -149,7 +196,6 @@ footer {
   flex-direction: column;
 }
 
-/* mobile media using max not min, removing sidebar and subheads */
 @media (min-width: 482px) {
   .container{
       /* Step 1: Set display to grid */
@@ -162,10 +208,53 @@ footer {
         "shl shr"
         "sd main"
         "ft ft";
-        border: 2px solid blue;
+        border: 2px #2196F3;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         padding: 5px;
-        background-color: #33cc33;
+        background-color: #ab9044;
+  }
+}
+
+@media (min-width: 482px){
+  .content {
+    font-family: Copse;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "bookpic"
+    "review-text"
+    "pubdata"
+    "navigate"
+    border: 2px
+    border-color: #2196F3;
+    border-radius: 5px;
+    grid-column-gap: 35px;
+    grid-row-gap: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .review-section {
+    font-family: Copse;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 2px
+    border-color: #2196F3;
+    border-radius: 5px;
+    grid-column-gap: 35px;
+    grid-row-gap: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 370px) {
+  .error{
+        display: none;
+        font-weight: bold;
   }
 }

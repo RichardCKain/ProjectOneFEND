@@ -113,16 +113,14 @@ footer {
 }
 
 .shl {
-  /* grid-area: shl;
+  grid-area: shl;
   text-align: center;
-  vertical-align: center; */
-  display: none;
+  vertical-align: center;
 }
 
 .shr {
-    /* grid-area: shr;
-    text-align: center; */
-    display: none;
+  grid-area: shr;
+  text-align: center;
 }
 
 .footer {

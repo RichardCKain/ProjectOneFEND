@@ -86,11 +86,12 @@ footer {
 .container{
     display:grid;
     grid-template-columns: 300px;
-    grid-template-rows: 100px 100px 3fr 1fr 50px;
+    grid-template-rows: 100px 100px 3fr 50px; auto 50px;
     grid-template-areas:
     "hd"
     "shr"
     "main"
+    "shl"
     "sd"
     "ft";
     border: 2px

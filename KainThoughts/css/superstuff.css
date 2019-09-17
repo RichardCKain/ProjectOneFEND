@@ -1,10 +1,7 @@
-
-
 .filterDiv {
   float: center;
   background-color: #2196F3;
   color: #ffffff;
-  /* width: 150px; */ removed width to test longer titles
   line-height: 100px;
   text-align: center;
   margin: 2px;
@@ -74,8 +71,8 @@ img {
   text-align: center;
   background-color: white;
   margin-bottom: 21px;
+  align-items: center;
 }
-
 
 footer {
   background-color: white;
@@ -83,7 +80,7 @@ footer {
   font-family: 'Euphoria Script', cursive;
 }
 
-.container{
+.container {
     display:grid;
     grid-template-columns: 300px;
     grid-template-rows: 100px 100px 3fr 50px; auto 50px;
@@ -128,6 +125,7 @@ footer {
   grid-area: ft;
   background-color: #e0e0eb;
 }
+
 .sidebar {
   grid-area: sd;
   display:flex;
@@ -135,6 +133,7 @@ footer {
   flex-wrap: nowrap;
   padding: 25px;
 }
+
 .content {
   grid-area: main;
   display: flex;
@@ -199,9 +198,7 @@ footer {
 
 @media (min-width: 482px) {
   .container{
-      /* Step 1: Set display to grid */
         display:grid;
-     /* Step 2: setup rows amd columns */
         grid-template-columns: 150px 4fr;
         grid-template-rows: 80px 35px auto 50px;
         grid-template-areas:
@@ -236,8 +233,8 @@ footer {
     "bookpic"
     "review-text"
     "pubdata"
-    "navigate"
-    border: 2px
+    "navigate";
+    border: 2px;
     border-color: #2196F3;
     border-radius: 5px;
     grid-column-gap: 35px;
@@ -251,7 +248,7 @@ footer {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    border: 2px
+    border: 2px;
     border-color: #2196F3;
     border-radius: 5px;
     grid-column-gap: 35px;

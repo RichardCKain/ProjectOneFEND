@@ -3,7 +3,6 @@
 
 <html lang="en" dir="ltr">
 
-
   <head>
 
     <meta charset="utf-8">
@@ -16,32 +15,28 @@
 
   <body>
 
-<!--am I changing the file in github-->
     <div class="error"><p>Ouch! Biblioblogga is best viewed on a bigger screen!</p></div>
 
     <div class="container">
-      <div class="header box"><h1>Biblioblogga</h1></div>
+      <div class="header box" role="banner"><h1>Biblioblogga</h1></div>
       <div class="shl box"><h2>Categories</h2></div>
       <div class="shr box"><h2>Reviews</h2></div>
 
 
       <nav class="sidebar box">
-        <div class="verticalizer" id="myBtnContainer">
+        <div class="verticalizer" id="myBtnContainer" role="navigation">
           <button class="btn active" onclick="filterSelection('all')">Show all</button>
           <button class="btn" onclick="filterSelection('nonfiction')">Non-Fiction</button>
           <button class="btn animals" onclick="filterSelection('literature')">Literature</button>
           <button class="btn" onclick="filterSelection('history')">History</button>
           <button class="btn" onclick="filterSelection('advice')">Advice</button>
           <button class="btn" onclick="filterSelection('philosophy')">Philosophy</button>
-          <!--try to get a random class in here? to return one book?-->
         </div>
       </nav>
 
-      <div class="content box">
+      <div class="content box"> <!--kept this in here though a bit redundant with the below for future changes -->
 
-        <div class="container2">
-
-          <!--would be fun to put in star overlay for favorites -->
+        <div class="container2" role="main">
           <div class="filterDiv nonfiction philosophy"><a href="posts/thewesterncanon.html"><img src="https://images.gr-assets.com/books/1388354484l/20941.jpg" alt="The Western Canon"></a></div>
           <div class="filterDiv nonfiction history"><a href="posts/westernsociety.html"><img src="https://images-na.ssl-images-amazon.com/images/I/510j9uJ%2B7-L._SX325_BO1,204,203,200_.jpg" alt="Western Society in the Middle Ages"></a></div>
           <div class="filterDiv literature"><a href="posts/scoop.html"><img src="http://ronyates2.productadvancecloud.com/wp-content/uploads/sites/24/2016/02/531260.jpg" alt="Scoop"></a></div>
@@ -70,7 +65,7 @@
     </div>
 
 
-
+    <!--the filtering script lifted from w3c -->
     <script>
     filterSelection("all")
     function filterSelection(c) {

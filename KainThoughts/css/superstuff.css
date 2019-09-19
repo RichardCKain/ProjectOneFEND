@@ -1,7 +1,6 @@
 @import "filterDiv.css";
 @import "blogpost.css";
 @import "desktop.css";
-@import "medias.css";
 
 h1 {
   color: white;
@@ -131,6 +130,11 @@ img {
   border-color: #2196F3;
 }
 
+.reviewtext {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
 .navigate {
   display: flex;
   justify-content: space-between;
@@ -153,8 +157,13 @@ img {
 }
 
 
-
-@media (min-width: 482px;) { /* instead of 482 */
+@media (min-width: 370px) {
+  .error{
+        display: none;
+        font-weight: bold;
+  }
+}
+@media (min-width: 482px) {
   .container{
         display:grid;
         grid-template-columns: 150px 4fr;
@@ -185,8 +194,8 @@ img {
   .content {
     font-family: Copse;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
     "bookpic"
     "review-text"
@@ -215,6 +224,4 @@ img {
     padding-right: 5%;
     margin-top: 20px;
   }
-
-
 }

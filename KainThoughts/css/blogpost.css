@@ -25,3 +25,8 @@
   grid-column-end: 2;
   border: 2px;
 }
+
+.reviewtext {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}

@@ -18,7 +18,10 @@
     <div class="error"><p>Ouch! Biblioblogga is best viewed on a bigger screen!</p></div>
 
     <div class="container">
-      <div class="header box" role="banner"><h1>Biblioblogga</h1></div>
+      <header class="header" role="banner">
+        <h1>Biblioblogga</h1>
+        <br>
+      </header>
       <div class="shl box"><h2>Categories</h2></div>
       <div class="shr box"><h2>Reviews</h2></div>
 
@@ -32,11 +35,15 @@
           <button class="btn" onclick="filterSelection('advice')">Advice</button>
           <button class="btn" onclick="filterSelection('philosophy')">Philosophy</button>
         </div>
+        <section class="fake">
+          <h4><a href="#">ABOUT</a></h4><h4><a href="#">SEARCH</a></h4><h4><a href="#">SUBSCRIBE</a></h4>
+        </section>
       </nav>
+
 
       <div class="content box"> <!--kept this in here though a bit redundant with the below for future changes -->
 
-        <div class="container2" role="main">
+        <main class="container2" role="main">
           <div class="filterDiv nonfiction philosophy"><a href="posts/thewesterncanon.html"><img src="https://images.gr-assets.com/books/1388354484l/20941.jpg" alt="The Western Canon"></a></div>
           <div class="filterDiv nonfiction history"><a href="posts/westernsociety.html"><img src="https://images-na.ssl-images-amazon.com/images/I/510j9uJ%2B7-L._SX325_BO1,204,203,200_.jpg" alt="Western Society in the Middle Ages"></a></div>
           <div class="filterDiv literature"><a href="posts/scoop.html"><img src="http://ronyates2.productadvancecloud.com/wp-content/uploads/sites/24/2016/02/531260.jpg" alt="Scoop"></a></div>
@@ -51,18 +58,16 @@
           <div class="filterDiv nonfiction history"><img src="https://images-na.ssl-images-amazon.com/images/I/914axpnsYZL.jpg" alt="Atomic Habits"></div>
           <div class="filterDiv nonfiction history"><img src="https://images-na.ssl-images-amazon.com/images/I/81OVy61J3PL.jpg" alt="The Path to Power"></div>
           <div class="filterDiv literature"><img src="https://images-na.ssl-images-amazon.com/images/I/61D%2B0YXxPuL._SX311_BO1,204,203,200_.jpg" alt="Phineas Redux"></div>
-        </div>
+        </main>
 
       </div>
 
+      <footer class="footer box">
+        <p>&copy; 2019 Richard Kain. All rights re...Actually you can steal this. Or <a href="mailto:rich@triplepointpr.com?subject=coolsitebro">email me</a></p>
+      </footer>
 
-
-      <div class="footer box">
-        <footer>
-          <p>&copy; 2019 Richard Kain. All rights re...Actually you can steal this. Or <a href="mailto:rich@triplepointpr.com?subject=coolsitebro">email me</a></p>
-        </footer>
-      </div>
     </div>
+
 
 
     <!--the filtering script lifted from w3c -->

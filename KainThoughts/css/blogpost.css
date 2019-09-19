@@ -1,0 +1,27 @@
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.authorinfo {
+  text-align: center;
+  background-color: white;
+  margin-bottom: 21px;
+  align-items: center;
+}
+
+.bookpic {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.pubdata {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  border: 2px;
+}

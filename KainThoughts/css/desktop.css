@@ -1,4 +1,4 @@
-@media (min-width: 482px) {
+@media (min-width: 750px) { /* up from 482 */
   .container{
         display:grid;
         grid-template-columns: 150px 4fr;
@@ -58,5 +58,9 @@
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 20px;
+  }
+
+  .pubdata {
+    font-weight: bold;
   }
 }

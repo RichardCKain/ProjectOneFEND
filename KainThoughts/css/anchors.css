@@ -1,0 +1,28 @@
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-block-start: 1px;
+  margin-block-end: 5px;
+  font-family: 'Vesper Libre', serif;
+}
+
+h3 {
+  font-family: 'Vesper Libre', serif;
+  font-style: oblique;
+}
+
+h4 {
+  background-color: white;
+}
+
+body {
+  padding: 20px;
+}
+
+img {
+  width: 200px;
+}

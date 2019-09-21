@@ -7,9 +7,9 @@
   font-weight: bold;
 }
 
-/* .navigate {
-  border-style: double;
-} */
+.navigate {
+  background-color: gray;
+}
 
 .footer {
   text-align: center;
@@ -39,6 +39,7 @@
     grid-row-gap: 5px;
     padding-left: 5%;
     padding-right: 5%;
+    justify-content: center;
 }
 
 .box {
@@ -86,7 +87,8 @@
 .content {
   grid-area: main;
   display: flex;
-  flex-direction: column; /* not row */
+  flex-direction: column;
+  justify-content: center;
   padding: 25px;
 }
 
@@ -110,10 +112,10 @@
   border-color: #2196F3;
 }
 
-.reviewtext {
+/* .reviewtext {
   grid-row-start: 1;
   grid-row-end: 3;
-}
+} why do I have this here? */
 
 .navigate {
   display: flex;
@@ -146,68 +148,65 @@
 
 @media (min-width: 750px) { /* up from 482 */
   .container{
-        display:grid;
-        grid-template-columns: 150px 4fr;
-        grid-template-rows: 80px 35px auto 50px;
-        grid-template-areas:
-        "hd hd"
-        "shl shr"
-        "sd main"
-        "ft ft";
-        border: 2px #2196F3;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        padding: 5px;
-        background-color: #ab9044;
+		display: grid;
+    grid-gap: 10px;
+		grid-template-columns: repeat(4, 1fr); /*removed [col] 150px*/
+		grid-template-rows: repeat(4, [row] auto);
+    border: 2px #2196F3;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding: 5px;
+    background-color: #ab9044;
+  }
+  .header {
+    grid-column: col / span 4;
+    grid-row: row;
   }
 
-  .shl {
-    grid-area: shl;
-    text-align: center;
-    vertical-align: center;
+ .shl {
+    display: none;
   }
 
   .shr {
-    grid-area: shr;
-    text-align: center;
+    display: none;
   }
 
-  .content {
-    font-family: Copse;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "bookpic"
-    "review-text"
-    "pubdata"
-    "navigate";
-    border: 2px;
-    border-color: #2196F3;
-    border-radius: 5px;
-    grid-column-gap: 35px;
-    grid-row-gap: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
+
+  .sidebar {
+    grid-column: col 1;
+    grid-row: row 2;
+    max-width: 200px;
   }
 
-  .review-section {
-    font-family: Copse;
+
+	.content {
+    grid-area: main;
+		grid-column: col 3 / span 2;
+		grid-row: row 2;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+		grid-template-columns: 200px 1fr;
     grid-template-areas:
-    "bookpic"
-    "review-text"
-    "navigate"
-    "pubdata";
-    border: 2px;
-    border-color: #2196F3;
-    border-radius: 5px;
-    grid-column-gap: 35px;
-    grid-row-gap: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 20px;
+     "b rt"
+     "p rt"
+     "p rtt"
+     "p n";
+	}
+
+  .bookpic {
+    grid-area: b;
+  }
+
+  .pubdata {
+    grid-area: p;
+  }
+
+  .review-text {
+    grid-area: rt;
+  }
+
+  .navigate {
+    grid-area: n;
+    background-color: gray;
   }
 }
